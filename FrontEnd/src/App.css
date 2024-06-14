@@ -1,0 +1,157 @@
+.header{
+  background-color:rgb(255, 255, 236) ;
+  width:100%;
+  height:100px;
+}
+
+.fruktur-regular {
+  font-family: "Fruktur", system-ui;
+  font-weight:50;
+  font-size: smaller;
+  font-style:normal;
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+  transform: translateX(630px);
+  width:200px;
+  
+}
+
+.header h1 {
+  display:inline;
+}
+
+.header nav{
+  height:40px;
+  position:relative;
+  top:-40px;
+  }
+
+.content{
+  background-color:rgb(241, 239, 153);
+}
+
+.list{
+  display:flex;
+ width:250px;
+  gap:30px;
+  list-style-type: none;
+  position:relative;
+  left: 65%;
+  top:-40px;
+  }
+
+
+a{
+  color:black;
+  text-decoration: none;
+}
+
+a.active{ 
+  color:rgb(237, 7, 7);
+}
+
+
+/* mouse over link */
+a:hover {
+  color: blue;
+  transform: scale3d(1.3, 1.3, 1.3);
+  text-decoration: double;
+}
+
+.btn{
+   color: black;;
+   background-color: white;
+   border:none;
+   font-size: 14px;
+}
+
+.loginform{
+  position: relative;
+  left: 70%;
+  top:-330px;
+  width:20%;
+  font-size: large;
+  font-weight:bold ;
+  height:300px; 
+  }
+
+#l2{
+  position: relative;
+  left:-03px;
+}
+
+#l3{
+  position:relative;
+  left:-17px;
+}
+
+#i2{
+  position: relative;
+  left:-17px;
+}
+
+.loginform button{
+  position: relative;
+  left:30%
+}
+
+.image{
+  width:120px;
+  height:90px;
+  display: inline;
+  position: relative;
+  left:10px;
+  top:10px;
+  padding:0px;
+  margin:0;
+}
+
+.loginform p{
+  color:red;
+  font: bold;
+}
+
+.logindiv{
+  display:inline;
+  position:relative;
+  top:10px;
+}
+
+.loginimage{
+  position:relative;
+  top:50px;
+  width:800px;
+  height:400px;
+}
+
+.addform{
+  font-size: large;
+  font-weight:bold ;
+  position:relative;
+  top:20px;
+  left:50px;
+  height:70vh;
+}
+
+.home{
+  height:70vh;
+}
+
+.userex{
+  font-size: large;
+  position:relative;
+  top:20px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.exerciseContainer{
+  text-align: center;
+  width:180px;
+  margin-right: 50px;
+  margin-bottom: 100px;
+ border:1px solid black;
+ background-color:rgb(161, 195, 152) ;
+ 
+}
