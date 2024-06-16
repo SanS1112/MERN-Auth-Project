@@ -11,7 +11,7 @@ const[err, setErr]=useState("");
 
 const navigate=useNavigate();
 
-useEffect(()=>{if(!user){  navigate("/Login")}})
+useEffect(()=>{if(!user && !localStorage.length){  navigate("/Login")}})
 
 
 
