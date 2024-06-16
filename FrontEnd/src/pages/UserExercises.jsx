@@ -19,8 +19,8 @@ export default function UserExercises(){
 },[]);*/
 
 
-
 useEffect(()=>{ async function get(){
+  if(user){
   try{
   const response= await fetch(`http://localhost:3000/getexercises/${user[0]._id}`,{credentials:"include"});
   if(!response.ok){ const error= await response.json();
@@ -28,10 +28,24 @@ useEffect(()=>{ async function get(){
   const Userexercises= await response.json();
   setEx(Userexercises);
 }catch(err){setErr(err.message)}
+}else if(localStorage.length){
+const usr = JSON.parse(localStorage.getItem("User"));
+try{
+  const response= await fetch(`http://localhost:3000/getexercises/${usr[0]._id}`,{credentials:"include"});
+  if(!response.ok){ const error= await response.json();
+  throw error;}
+  const Userexercises= await response.json();
+  setEx(Userexercises);
+}catch(err){setErr(err.message)}
 }
-if(user){
-get();} else navigate("/Login");
+}
+
+if(user || localStorage.length){
+  console.log(user);
+get();
+} else navigate("/Login");
    },[user])
+
 
 
     return (
