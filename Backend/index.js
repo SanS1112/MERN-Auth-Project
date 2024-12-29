@@ -24,10 +24,10 @@ app.use(cookieParser());
 //2. The methods allowed by the server.
 //3. The headers(in the request) allowed by the server.
 //4. The permission to browser to accept & store the Set-Cookie header(credentials) from cross-origin responses.
-//4a. The credentials option in the fetchAPI(frontend) when set to "include" allows sending & receiving Cookies.
+//4a. The credentials option in the fetchAPI(frontend) when set to "include" allows sending Cookies received earlier from server-side.
 //    For the browser to accept & store cookies sent by server, the server response must include Set-Cookie headers(res.Cookie does this)
 //    & for cross-origin requests it must have additional  headers like::
-//    -> "Access-Control-Allow-Credentials" set to "true" which permits browser to accept & store the cookies.
+//    -> "Access-Control-Allow-Credentials" set to "true" which permits browser to let client-side code to send credentials to server.
 //    ->"Access-Control-Allow-Orgin" specifying the origin allowed to send request to the server. 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin","http://localhost:5173" ); 
