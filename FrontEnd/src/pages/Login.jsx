@@ -38,8 +38,23 @@ try{
       } else throw user;
 }catch(error){setA(a=>error.message);}
 }
+//For cookies to be saved in the browser when the server sends them in the response, the following conditions must be met:
 
+//1.Same-Origin or CORS with Credentials:
+//If the request is cross-origin, the server must respond with these headers:
+//Access-Control-Allow-Origin: https://example-client.com
+//Access-Control-Allow-Credentials: true
 
+//2.Set-Cookie Header:
+//The server must send cookies in the response using the Set-Cookie header. Example:
+//Set-Cookie: sessionId=abc123; Secure; HttpOnly; SameSite=None
+
+//3. Secure Context:
+//For cross-origin requests or sensitive operations, the connection must be over HTTPS.
+
+//4.Proper SameSite Attribute:
+//For cross-origin requests, the cookie's SameSite attribute must be set to None:
+//Set-Cookie: sessionId=abc123; SameSite=None; Secure
    return (
      <>
      <div className="logindiv"><img className="loginimage" src="../image2.jpeg"></img></div>
